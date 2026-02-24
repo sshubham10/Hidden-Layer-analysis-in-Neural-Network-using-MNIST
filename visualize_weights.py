@@ -3,7 +3,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 
-filename = "GRP25_2022B1A81559G_2022A8PS0671G.json"
+filename = "train.json"
 
 with open(filename, "r") as f:
     data = json.load(f)
@@ -29,5 +29,5 @@ fig.colorbar(im, cax=cbar_ax, label='Weight Value (Red: Positive, Blue: Negative
 plt.subplots_adjust(top=0.9, right=0.9)
 plt.show()
 
-fig.savefig("GRP25_WEIGHT_VISUALIZATION.png")
-print("Visualization saved as GRP25_WEIGHT_VISUALIZATION.png")
+fig.savefig("WEIGHT_VISUALIZATION.png")
+print("Visualization saved as WEIGHT_VISUALIZATION.png")
