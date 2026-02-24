@@ -87,7 +87,7 @@ The script loads weights from the JSON file and generates the weight heatmap, to
 
 ### **Credits & Attribution**
 
-*  **Base Implementation**: Core neural network engine adapted from *Neural Networks and Deep Learning* by Michael Nielsen.
+*  **Base Implementation**: Core neural network engine adapted from *Neural Networks and Deep Learning* by Michael Nielsen. https://github.com/mnielsen/neural-networks-and-deep-learning
 
 
 *  **Analysis & Visualization**: All technical implementations of Tasks 1-3, including the weight heatmaps, activation studies, and interpretability conclusions, were developed independently.
