@@ -10,7 +10,7 @@ print("Loading data and model...")
 training_data, _, _ = mnist_loader.load_data_wrapper()
 training_list = list(training_data) 
 
-with open("GRP25_2022B1A81559G_2022A8PS0671G.json", "r") as f:
+with open("train.json", "r") as f:
     model = json.load(f)
 
 w1 = np.array(model["weights"][0])
