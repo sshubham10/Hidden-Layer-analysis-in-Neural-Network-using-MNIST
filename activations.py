@@ -7,7 +7,7 @@ import mnist_loader
 
 training_data, _, _ = mnist_loader.load_data_wrapper()
 data_subset = list(training_data)[:5000] 
-filename = "GRP25_2022B1A81559G_2022A8PS0671G.json"
+filename = "train.json"
 
 with open(filename, "r") as f:
     model = json.load(f)
@@ -40,7 +40,7 @@ for j in range(20):
     plt.xticks(range(10))
     plt.xlabel("Digit Class (0-9)")
     plt.ylabel("Average Activation")
-    plt.title(f"Task 3: Class-Selectivity for Neuron {j}")
+    plt.title(f"Class-Selectivity for Neuron {j}")
     
     plt.savefig(f"NEURON_{j}_SELECTIVITY.png")
     plt.close()
