@@ -10,16 +10,13 @@ The core engine utilizes a three-layer architecture $[784, 20, 10]$ implemented 
 
 ### **Technical Implementation**
 
-* 
-**Optimal Training Configuration**: Achieved a peak test accuracy of **~94.1%** using a learning rate of **3.0**, a mini-batch size of **10**, and **30 epochs**.
+*  **Optimal Training Configuration**: Achieved a peak test accuracy of **~94.1%** using a learning rate of **3.0**, a mini-batch size of **10**, and **30 epochs**.
 
 
-* 
-**Stochasticity**: Used smaller batch sizes to introduce beneficial noise, helping the model avoid local minima.
+*  **Stochasticity**: Used smaller batch sizes to introduce beneficial noise, helping the model avoid local minima.
 
 
-* 
-**Interpretation Engine**: Custom scripts were developed to extract weight vectors and reshape them into $28\times28$ heatmaps to analyze excitatory (positive) and inhibitory (negative) regions.
+*  **Interpretation Engine**: Custom scripts were developed to extract weight vectors and reshape them into $28\times28$ heatmaps to analyze excitatory (positive) and inhibitory (negative) regions.
 
 
 
@@ -33,12 +30,10 @@ One of the primary findings of this project is that the hidden layer does not le
 
 These neurons act as "building block detectors." They fire based on specific geometric strokes or curves shared across many digits.
 
-* 
-**Neuron 0 ("Upper Curve Detector")**: Triggers on curved strokes shared by '0' and '2'.
+*  **Neuron 0 ("Upper Curve Detector")**: Triggers on curved strokes shared by '0' and '2'.
 
 
-* 
-**Neuron 13 ("Loop Detector")**: Shows generalized activation across almost all classes, acting as a background or edge detector.
+*  **Neuron 13 ("Loop Detector")**: Shows generalized activation across almost all classes, acting as a background or edge detector.
 
 
 
@@ -46,12 +41,10 @@ These neurons act as "building block detectors." They fire based on specific geo
 
 These neurons act as specialized "digit detectors" that have a dominant preference for a single category.
 
-* 
-**Neuron 8 ("Digit 4 Detector")**: Specifically tuned to identify the parallel vertical strokes of a '4'.
+*  **Neuron 8 ("Digit 4 Detector")**: Specifically tuned to identify the parallel vertical strokes of a '4'.
 
 
-* 
-**Neuron 19 ("Digit 0 Detector")**: Almost exclusively activates for the circular structure of a '0'.
+*  **Neuron 19 ("Digit 0 Detector")**: Almost exclusively activates for the circular structure of a '0'.
 
 
 
@@ -76,22 +69,29 @@ These neurons act as specialized "digit detectors" that have a dominant preferen
 │   └── Detailed visualization using jpg and png images for each neuron
 └── README.md
 
+
+```
+
 ### **How to Run**
 
-To reproduce the analysis for the favorite hidden neuron (Neuron 11), run:
+To reproduce the analysis for the favorite hidden neuron (**Neuron 11 - "Jalebi"** ), run:
 
 ```bash
 python fav_neuron.py
 
 ```
 
-The script will load the weights from the JSON file and display the heatmap, top-8 activating inputs, and class-selectivity bar chart in under 10 seconds.
+The script loads weights from the JSON file and generates the weight heatmap, top-8 inputs, and selectivity bar chart in under 10 seconds.
 
 ---
 
 ### **Credits & Attribution**
 
-*  **Core Engine**: Logic adapted from *Neural Networks and Deep Learning* by Michael Nielsen.
+*  **Base Implementation**: Core neural network engine adapted from *Neural Networks and Deep Learning* by Michael Nielsen.
 
 
-*  **Analysis & Report**: All technical implementations of Tasks 1-3, weight visualizations, and analytical observations were conducted independently.
+*  **Analysis & Visualization**: All technical implementations of Tasks 1-3, including the weight heatmaps, activation studies, and interpretability conclusions, were developed independently.
+
+
+
+---
