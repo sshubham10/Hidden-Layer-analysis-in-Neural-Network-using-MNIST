@@ -65,9 +65,9 @@ These neurons act as specialized "digit detectors" that have a dominant preferen
 │   ├── mnist_loader.py        # Data loading utility
 │   └── GRP25_ANALYSIS.py      # My analytical modules (Tasks 1, 2, 3)
 ├── model/
-│   └── GRP25_WEIGHTS.json     # Saved parameters (94%+ Accuracy)
-├── report/
-│   └── GRP25_FINAL_REPORT.pdf # Detailed visualization & interpretation
+│   └── train.json     # Saved parameters (94%+ Accuracy)
+├── visuals/
+│   └── # Detailed visualization & interpretation
 └── README.md
 
 ```
