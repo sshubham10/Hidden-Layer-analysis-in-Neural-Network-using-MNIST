@@ -59,25 +59,29 @@ These neurons act as specialized "digit detectors" that have a dominant preferen
 
 ### **Project Structure**
 
-```text
-├── src/
-│   ├── network.py             # Base implementation (Michael Nielsen)
-│   ├── mnist_loader.py        # Data loading utility
-│   └── GRP25_ANALYSIS.py      # My analytical modules (Tasks 1, 2, 3)
-├── model/
-│   └── train.json     # Saved parameters (94%+ Accuracy)
-├── visuals/
-│   └── # Detailed visualization & interpretation
-└── README.md
-
 ```
+├── src/
+│   ├── training_network.py   # Hyperparameter tuning and training logic
+│   ├── network.py            # Core engine (Backprop & SGD) [Nielsen]
+│   ├── mnist_loader.py       # Data loading utility [Nielsen]
+│   ├── visualize_weights.py  # Heatmap generation for Task 1
+│   ├── activations.py        # Top-activating image extraction for Task 2
+│   ├── analyze_neurons.py    # Class-selectivity and distribution for Task 3
+│   └── fav_neuron.py         # Main script to showcase the "Favorite Neuron"
+├── model/
+│   └── train.json    # Saved parameters (94%+ Accuracy)
+├── report/
+│   └── report.pdf# Detailed analysis report
+├── visuals/
+│   └── Detailed visualization using jpg and png images for each neuron
+└── README.md
 
 ### **How to Run**
 
 To reproduce the analysis for the favorite hidden neuron (Neuron 11), run:
 
 ```bash
-python GRP25_2022B1A81559G_2022A8PS0671G.py
+python fav_neuron.py
 
 ```
 
@@ -87,13 +91,7 @@ The script will load the weights from the JSON file and display the heatmap, top
 
 ### **Credits & Attribution**
 
-* 
-**Core Engine**: Logic adapted from *Neural Networks and Deep Learning* by Michael Nielsen.
+*  **Core Engine**: Logic adapted from *Neural Networks and Deep Learning* by Michael Nielsen.
 
 
-* 
-**Analysis & Report**: All technical implementations of Tasks 1-3, weight visualizations, and analytical observations were conducted independently.
-
-
-
-Would you like me to help you create a specific "How to contribute" or "License" section for this README?
+*  **Analysis & Report**: All technical implementations of Tasks 1-3, weight visualizations, and analytical observations were conducted independently.
